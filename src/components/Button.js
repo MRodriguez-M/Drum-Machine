@@ -3,7 +3,7 @@ import React from "react";
 const Button = () => {
     return (
         <>
-            <div id="drum-machine">button</div>
+            <div className="drum-pad">Q</div>
         </>
     );
 };
