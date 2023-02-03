@@ -1,0 +1,36 @@
+html {
+    background-color: #141414;
+}
+
+#drum-machine {
+    background-color: #bebebe;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    margin: auto;
+    border: 6px solid green;
+    height: 50vh;
+}
+
+#drum-keys {
+    background-color: blue;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#display {
+    background-color: yellow;
+}
+
+.drum-pad {
+    background-color: #808080;
+    width: 13vh;
+    border: 3px solid red;
+    height: 13vh;
+    text-align: center;
+}
