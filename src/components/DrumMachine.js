@@ -6,9 +6,15 @@ const DrumMachine = () => {
         <>
             <div id="drum-machine">
                 <div id="drum-keys">
-                    <Button />
-                    <Button />
-                    <Button />
+                    <Button letter="Q" />
+                    <Button letter="W" />
+                    <Button letter="E" />
+                    <Button letter="A" />
+                    <Button letter="S" />
+                    <Button letter="D" />
+                    <Button letter="Z" />
+                    <Button letter="X" />
+                    <Button letter="C" />
                 </div>
                 <div id="display">display</div>
             </div>
