@@ -6,15 +6,15 @@ const DrumMachine = () => {
         <>
             <div id="drum-machine">
                 <div id="drum-keys">
-                    <Button letter="Q" />
-                    <Button letter="W" />
-                    <Button letter="E" />
-                    <Button letter="A" />
-                    <Button letter="S" />
-                    <Button letter="D" />
-                    <Button letter="Z" />
-                    <Button letter="X" />
-                    <Button letter="C" />
+                    <Button letter="Q" fileName="Heater-1" />
+                    <Button letter="W" fileName="Heater-2" />
+                    <Button letter="E" fileName="Heater-3" />
+                    <Button letter="A" fileName="Heater-4" />
+                    <Button letter="S" fileName="Clap" />
+                    <Button letter="D" fileName="Open-HH" />
+                    <Button letter="Z" fileName="Kick-n-Hat" />
+                    <Button letter="X" fileName="Kick" />
+                    <Button letter="C" fileName="Closed-HH" />
                 </div>
                 <div id="display">display</div>
             </div>
