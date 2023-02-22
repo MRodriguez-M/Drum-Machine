@@ -25,6 +25,10 @@ html {
 
 #display {
     background-color: yellow;
+    width: 25%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
 }
 
 .drum-pad {
