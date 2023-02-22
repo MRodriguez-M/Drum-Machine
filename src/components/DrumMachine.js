@@ -1,14 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 
+const buttonData = {
+    "Q": "Heater-1",
+    "W": "Heater-2",
+    "E": "Heater-3",
+    "A": "Heater-4",
+    "S": "Clap",
+    "D": "Open-HH",
+    "Z": "Kick-n-Hat",
+    "X": "Kick",
+    "C": "Closed-HH"  
+}
+
 const DrumMachine = () => {
+    const [soundName, setSoundName] = useState('Click or press key');
+
     const handleKeyDown = (event) => {
         document.getElementById(event.key.toUpperCase()).play();
-        console.log('A key was pressed', event.key);
+        setSoundName(buttonData[event.key.toUpperCase()]);
     };
 
-    const handleClick = (letter) => {
+    const handleClick = (letter, fileName) => {
         document.getElementById(letter).play();
+        setSoundName(fileName);
     };
 
     useEffect(() => {
@@ -23,17 +38,11 @@ const DrumMachine = () => {
         <>
             <div id="drum-machine">
                 <div id="drum-keys">
-                    <Button letter="Q" fileName="Heater-1" handleClick={handleClick} />
-                    <Button letter="W" fileName="Heater-2" handleClick={handleClick} />
-                    <Button letter="E" fileName="Heater-3" handleClick={handleClick} />
-                    <Button letter="A" fileName="Heater-4" handleClick={handleClick} />
-                    <Button letter="S" fileName="Clap" handleClick={handleClick} />
-                    <Button letter="D" fileName="Open-HH" handleClick={handleClick} />
-                    <Button letter="Z" fileName="Kick-n-Hat" handleClick={handleClick} />
-                    <Button letter="X" fileName="Kick" handleClick={handleClick} />
-                    <Button letter="C" fileName="Closed-HH" handleClick={handleClick} />
+                    {Object.keys(buttonData).map(letter => 
+                        <Button letter={letter} key={letter} fileName={buttonData[letter]} handleClick={handleClick} />
+                    )}
                 </div>
-                <div id="display">display</div>
+                <div id="display">{soundName}</div>
             </div>
         </>
     );
