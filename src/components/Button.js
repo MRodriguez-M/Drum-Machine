@@ -4,7 +4,7 @@ const Button = (props) => {
     return (
         <>
             <audio src={`/assets/${props.fileName}.mp3`} className="clip" id={props.letter}></audio>
-            <button className="drum-pad" onClick={() => props.handleClick(props.letter)}>{props.letter}</button>
+            <button className="drum-pad" onClick={() => props.handleClick(props.letter, props.fileName)}>{props.letter}</button>
         </>
     );
 };
