@@ -16,11 +16,11 @@ html {
 }
 
 #drum-keys {
-    background-color: blue;
     width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-top: 15px;
 }
 
 #display {
@@ -29,6 +29,7 @@ html {
     margin: auto;
     padding: 10px;
     text-align: center;
+    font-weight: bold;
 }
 
 .drum-pad {
@@ -37,4 +38,6 @@ html {
     border: 3px solid red;
     height: 13vh;
     text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
